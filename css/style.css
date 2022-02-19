@@ -8,7 +8,7 @@
 */
 
 html {
-    
+
 }
 
 body {
@@ -113,7 +113,7 @@ h4 {
 }
 
 .grid-item {
-    height: 15vw;
+    height: 200px;
     width: 98%;
 
     transition: all 0.5s linear;
@@ -128,7 +128,7 @@ h4 {
 }
 
 .image {
-    height: 15vw;
+    height: 200px;
     width: 100%;
 
     transition: all 0.5s linear;
@@ -152,7 +152,7 @@ h4 {
 
 .footer-item {
     /*background-color: rgb(87, 61, 16);*/
-    height: 28px;
+    height: 1.6em;
     margin: 5px;
     padding: 5px;
     border-radius: 50%;
