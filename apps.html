@@ -60,34 +60,13 @@
         </nav>
         <!-- </div> -->
 
-        <div class="main-image">
-            <img id="image-banner" src="../img/img-4.jpg" style="flex: 1 5 auto;">
-        </div>
-
-        <div class="content">
-
-            <h1 id="home" style="margin: 40px;">Home</h1>
-
-            <p>This website is here to teach you all sorts of information about monkeys</p>
-
-           <br/>
-
-           <p style="margin-bottom: 40px;">Click on a monkey below to learn more about it</p> 
-
-            <div class="image-grid">
-                <div class="grid-item">
-                    <a href="capuchin.html"><img class="image" src="../img/capuchin.jpg"></a>
-                </div>
-                <div class="grid-item">
-                    <a href="gibbon.html"><img class="image" src="../img/gibbon.jpg"></a>
-                </div>
-                <div class="grid-item">
-                    <a href="tamarin.html"><img class="image" src="../img/tamarin.jpg"></a>
-                </div>
-                <div class="grid-item">
-                    <a href="siamang.html"><img class="image" src="../img/siamang.jpg"></a>
-                </div>
-            </div>
+        <div>
+            <h2 id="counter-title">Counter</h2>
+            <h2 id="count-el">0</h2>
+            <button id="increment-btn" onclick="increment()">INCREMENT</button>
+            <br/>
+            <button id="save-btn" onclick="save()">SAVE</button>
+            <p id="save-el">Previous entries: </p>
         </div>
 
 
@@ -110,6 +89,29 @@
     <div class="whitespace"></div>
 </div>
 
-<script src="script.js"></script>
+<script>
+    let clickcount = 0
+
+    let countEl = document.getElementById("count-el")
+
+    console.log(countEl)
+
+    function increment() {
+        clickcount += 1
+        // .innerText lets you access the text in the HTML file
+        countEl.innerText = clickcount
+    }
+
+    let saveEl = document.getElementById("save-el")
+
+    function save() {
+    let countStr = clickcount + " - "
+    // .textContent is like innerText but shows hidden elements like spaces
+    saveEl.textContent += countStr
+    clickcount = 0
+    countEl.textContent = clickcount
+}
+</script>
+
 </body>
 </html>
